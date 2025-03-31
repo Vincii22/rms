@@ -1,0 +1,19 @@
+{
+  "name": "rms-app",
+  "version": "1.0.0",
+  "type": "module", 
+  "main": "electron/main.js",
+  "scripts": {
+    "dev": "concurrently \"npm run backend:start\" \"npm run frontend:start\" \"npm run electron:start\"",
+    "backend:start": "cd backend && node server.js",
+    "frontend:start": "cd frontend && npm run dev",
+    "electron:start": "cd electron && npx electron ."
+  },
+  "dependencies": {
+    "concurrently": "^8.2.1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
